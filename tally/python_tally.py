@@ -17,7 +17,7 @@ from tkinter import ttk
 def list_group():
     global Canvas1
     Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
     Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#d2e3fa",
                                      foreground="#00254a",
                                      font="-family {Segoe UI} -size 10 -weight bold ")
@@ -36,19 +36,19 @@ def list_group():
 
     global Canvas2
     Canvas2 = tk.Canvas(Canvas1, background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas2.place(relx=0.360, rely=0.142, relheight=0.700, relwidth=0.290)
+    Canvas2.place(relx=0.360, rely=0.142, relheight=0.875, relwidth=0.290)
     Label5 = Label(Canvas2,text='List of Groups',borderwidth="0", width=3, background="#3385ff",
                                     foreground="#00254a",
                                      font="-family {Segoe UI} -size 10 -weight bold ")
     Label5.place(relx=0, rely=0, relheight=0.1, relwidth=0.999)
     btn=Button(Canvas2,text='Create',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0.6,y=38,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Stock_Query).place(relx=0.6,y=38,relwidth=0.400)
     btn=Button(Canvas2,text='Back',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0.6,y=58,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Stock_Query).place(relx=0.6,y=58,relwidth=0.400)
     btn=Button(Canvas2,text='Bank Accounts',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0,y=78,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=bank_acc).place(relx=0,y=78,relwidth=0.400)
     btn1=Button(Canvas2,text='Bank OCC A/c',borderwidth="0",background="#e6ffff",
-                                   foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=98,relwidth=0.400)
+                                   foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=bank_occ).place(relx=0,y=98,relwidth=0.400)
     btn2=Button(Canvas2,text='Bank OD A/c',borderwidth="0",background="#e6ffff",
                                      foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=118,relwidth=0.400)
     btn2=Button(Canvas2,text='Branch / Divisions',borderwidth="0",background="#e6ffff",
@@ -81,10 +81,10 @@ def list_group():
     Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
     Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
 
-def Stock_Query():
+def list_ledger():
     global Canvas1
     Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
     Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#d2e3fa",
                                      foreground="#00254a",
                                      font="-family {Segoe UI} -size 10 -weight bold ")
@@ -103,43 +103,205 @@ def Stock_Query():
 
     global Canvas2
     Canvas2 = tk.Canvas(Canvas1, background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas2.place(relx=0.360, rely=0.142, relheight=0.700, relwidth=0.290)
+    Canvas2.place(relx=0.360, rely=0.142, relheight=0.875, relwidth=0.290)
+    Label5 = Label(Canvas2,text='List of Ledgers',borderwidth="0", width=3, background="#3385ff",
+                                    foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.1, relwidth=0.999)
+    btn=Button(Canvas2,text='Create',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0.6,y=38,relwidth=0.400)
+    btn=Button(Canvas2,text='Back',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Stock_Query).place(relx=0.6,y=58,relwidth=0.400)
+    btn=Button(Canvas2,text='Cash',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=78,relwidth=0.400)
+    btn1=Button(Canvas2,text='Profit & Loss A/c',borderwidth="0",background="#e6ffff",
+                                   foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=98,relwidth=0.400)
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
+def list_currency():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
+    Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#d2e3fa",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas4.place(relx=0.380, rely=0.0300, relheight=0.110, relwidth=0.250)
+    Label6 = Label(Canvas4,text='Master Alteration',borderwidth="0", width=7, background="white",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label6.place(relx=0.25, rely=0.20, relheight=0.30, relwidth=0.400)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.25, rely=0.60, relheight=0.30, relwidth=0.500)
+
+
+    global Canvas2
+    Canvas2 = tk.Canvas(Canvas1, background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas2.place(relx=0.360, rely=0.142, relheight=0.875, relwidth=0.290)
+    Label5 = Label(Canvas2,text='List of Currencies',borderwidth="0", width=3, background="#3385ff",
+                                    foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.1, relwidth=0.999)
+    btn=Button(Canvas2,text='Create',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0.6,y=38,relwidth=0.400)
+    btn=Button(Canvas2,text='Back',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Stock_Query).place(relx=0.6,y=58,relwidth=0.400)
+    btn=Button(Canvas2,text='₹',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=78,relwidth=0.400)
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
+def list_voucher():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
+    Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#d2e3fa",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas4.place(relx=0.380, rely=0.0300, relheight=0.110, relwidth=0.250)
+    Label6 = Label(Canvas4,text='Master Alteration',borderwidth="0", width=7, background="white",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label6.place(relx=0.25, rely=0.20, relheight=0.30, relwidth=0.400)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.25, rely=0.60, relheight=0.30, relwidth=0.500)
+
+
+    global Canvas2
+    Canvas2 = tk.Canvas(Canvas1, background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas2.place(relx=0.360, rely=0.142, relheight=0.875, relwidth=0.290)
+    Label5 = Label(Canvas2,text='List of Voucher Type',borderwidth="0", width=3, background="#3385ff",
+                                    foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.1, relwidth=0.999)
+    btn=Button(Canvas2,text='Create',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0.6,y=38,relwidth=0.400)
+    btn=Button(Canvas2,text='Show Inactive',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0.6,y=58,relwidth=0.400)
+    btn=Button(Canvas2,text='Back',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Stock_Query).place(relx=0.6,y=78,relwidth=0.400)
+    btn1=Button(Canvas2,text='Contra',borderwidth="0",background="#e6ffff",
+                                   foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=98,relwidth=0.400)
+    btn2=Button(Canvas2,text='Credit Note',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=118,relwidth=0.400)
+    btn2=Button(Canvas2,text='Debit Note',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=138,relwidth=0.400)
+    btn2=Button(Canvas2,text='Delivery Note',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=158,relwidth=0.400)
+    btn2=Button(Canvas2,text='Journel',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=178,relwidth=0.400)
+    btn2=Button(Canvas2,text='Material In',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=198,relwidth=0.400) 
+    btn2=Button(Canvas2,text='Material Out',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=218,relwidth=0.400)
+    btn2=Button(Canvas2,text='Memorandum',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=238,relwidth=0.400) 
+    btn2=Button(Canvas2,text='Payment',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=258,relwidth=0.400)
+    btn2=Button(Canvas2,text='Physical Stock',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=278,relwidth=0.400)
+    btn2=Button(Canvas2,text='Purchase',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=298,relwidth=0.400)
+    btn2=Button(Canvas2,text='Purchase Order',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=318,relwidth=0.400)
+    btn2=Button(Canvas2,text='Receipt',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=338,relwidth=0.400)
+    btn2=Button(Canvas2,text='Receipt Note',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=358,relwidth=0.400)
+    btn2=Button(Canvas2,text='Rejections In',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=378,relwidth=0.400)
+    btn2=Button(Canvas2,text='Rejections Out',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=398,relwidth=0.400)
+    btn2=Button(Canvas2,text='Reversing Journel',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=418,relwidth=0.400)
+    btn2=Button(Canvas2,text='Sales',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=438,relwidth=0.400)
+    btn2=Button(Canvas2,text='Sales order',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=458,relwidth=0.400)
+    btn2=Button(Canvas2,text='Stock Journel',borderwidth="0",background="#e6ffff",
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=478,relwidth=0.400)                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+
+def Stock_Query():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
+    Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#d2e3fa",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas4.place(relx=0.380, rely=0.0300, relheight=0.110, relwidth=0.250)
+    Label6 = Label(Canvas4,text='Master Alteration',borderwidth="0", width=7, background="white",
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label6.place(relx=0.25, rely=0.20, relheight=0.30, relwidth=0.400)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3")
+    Entry1.place(relx=0.25, rely=0.60, relheight=0.30, relwidth=0.500)
+
+
+    global Canvas2
+    Canvas2 = tk.Canvas(Canvas1, background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas2.place(relx=0.360, rely=0.142, relheight=0.875, relwidth=0.290)
     Label5 = Label(Canvas2,text='List of Masters',borderwidth="0", width=3, background="#3385ff",
                                     foreground="#00254a",
                                      font="-family {Segoe UI} -size 10 -weight bold ")
     Label5.place(relx=0, rely=0, relheight=0.1, relwidth=0.999)
     btn=Button(Canvas2,text='Change company',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0.6,y=38,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Ledger_Analysis).place(relx=0.6,y=38,relwidth=0.400)
     btn=Button(Canvas2,text='Expand All',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0.6,y=58,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Ledger_Analysis).place(relx=0.6,y=58,relwidth=0.400)
     btn=Button(Canvas2,text='Show more',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=create_group).place(relx=0.6,y=78,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Ledger_Analysis).place(relx=0.6,y=78,relwidth=0.400)
     btn1=Button(Canvas2,text='Accounting Masters',borderwidth="0",background="#e6ffff",
                                    foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=98,relwidth=0.400)
     btn2=Button(Canvas2,text='Group',borderwidth="0",background="#e6ffff",
                                      foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=list_group).place(relx=0,y=118,relwidth=0.400)
     btn2=Button(Canvas2,text='Ledger',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=138,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=list_ledger).place(relx=0,y=138,relwidth=0.400)
     btn2=Button(Canvas2,text='Currency',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=158,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=list_currency).place(relx=0,y=158,relwidth=0.400)
     btn2=Button(Canvas2,text='Voucher Type',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=178,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=list_voucher).place(relx=0,y=178,relwidth=0.400)
     btn2=Button(Canvas2,text='Inventory Masters',borderwidth="0",background="#e6ffff",
                                      foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=198,relwidth=0.400) 
     btn2=Button(Canvas2,text='Stock Group',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=228,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=selected_groups).place(relx=0,y=228,relwidth=0.400)
     btn2=Button(Canvas2,text='Stock Category',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=248,relwidth=0.400) 
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Movement_Analysis).place(relx=0,y=248,relwidth=0.400) 
     btn2=Button(Canvas2,text='Stock Item',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=268,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Group_Analysis).place(relx=0,y=268,relwidth=0.400)
     btn2=Button(Canvas2,text='Unit',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=288,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Ledger_Analysis).place(relx=0,y=288,relwidth=0.400)
     btn2=Button(Canvas2,text='Godown',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=308,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Ledgers).place(relx=0,y=308,relwidth=0.400)
     btn2=Button(Canvas2,text='Statutory Details',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=328,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Transfer_Analysis).place(relx=0,y=328,relwidth=0.400)
     btn2=Button(Canvas2,text='GSt Details',borderwidth="0",background="#e6ffff",
-                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=348,relwidth=0.400)
+                                     foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Stock_Journal).place(relx=0,y=348,relwidth=0.400)
     btn2=Button(Canvas2,text='PAN/CIN Details',borderwidth="0",background="#e6ffff",
                                      foreground="black",width=9,font="-family {Segoe UI} -size 10 ",command=Selected_Stocks).place(relx=0,y=368,relwidth=0.400)
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
@@ -243,7 +405,7 @@ def Movement_Analysis():
 def Group_Analysis():
     global Canvas1
     Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
     Label5 = Label(Canvas1,text='Company name',borderwidth="0", width=3, background="#3385ff",
                                      foreground="#00254a",
                                      font="-family {Segoe UI} -size 10 -weight bold ")
@@ -279,14 +441,19 @@ def Group_Analysis():
     Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
 
 
-def create_group():
+def bank_acc():
     global Canvas1
     Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas1.place(relx=0, rely=0.070, relheight=0.800, relwidth=.850)
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
+    Label5 = Label(Canvas1,text='Group alteration',borderwidth="0", width=3, background="#d2e3fa",anchor='w',
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+   
 
     global Canvas4
     Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="white", relief="ridge",selectbackground="white", selectforeground="white")
-    Canvas4.place(relx=0.01, rely=0.040, relheight=0.760, relwidth=0.650)
+    Canvas4.place(relx=0.01, rely=0.040, relheight=0.760, relwidth=0.800)
     Label6 = Label(Canvas4,text='Name',borderwidth="0", width=7, background="white",foreground="#00254a",
         font="-family {Segoe UI} -size 8 ")
     Label6.place(relx=0.00, rely=0.010, relheight=0.05, relwidth=0.200)
@@ -300,35 +467,35 @@ def create_group():
     Label1 = Label(Canvas4,text='Under   :',borderwidth="0", width=7, background="white",foreground="#00254a",
         font="-family {Segoe UI} -size 8 ")
     Label1.place(relx=0.0, rely=0.250, relheight=0.05, relwidth=0.200)
-    options_list = ["Group1", "Group2","Group3","Group4"]
+    options_list = ["Current Assets"]
     cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
     cmb.place(relx=0.4, rely=0.250, relheight=0.05, relwidth=0.300)
 
     
-    Label8 = Label(Canvas4,text='Behaves like a sub-ledger',borderwidth="0", width=7, background="white",foreground="#00254a",
+    Label8 = Label(Canvas4,text='Group Behaves like a sub-ledger',borderwidth="0", width=7, background="white",foreground="#00254a",
         font="-family {Segoe UI} -size 8 ")
-    Label8.place(relx=0.0, rely=0.400, relheight=0.05, relwidth=0.200)
+    Label8.place(relx=0.0, rely=0.400, relheight=0.05, relwidth=0.300)
     options_list = ["Yes", "No"]
     cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
     cmb.place(relx=0.4, rely=0.400, relheight=0.05, relwidth=0.300)
 
-    Label3 = Label(Canvas4,text='Nett debit\credit card balance',borderwidth="0", width=7, background="white",foreground="#00254a",
+    Label3 = Label(Canvas4,text='Nett debit\credit balances for reporting',borderwidth="0", width=7, background="white",foreground="#00254a",
         font="-family {Segoe UI} -size 8 ")
-    Label3.place(relx=0.0, rely=0.460, relheight=0.05, relwidth=0.200)
+    Label3.place(relx=0.0, rely=0.460, relheight=0.05, relwidth=0.300)
     options_list = ["Yes", "No"]
     cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
     cmb.place(relx=0.4, rely=0.460, relheight=0.05, relwidth=0.300)
 
-    Label2 = Label(Canvas4,text='Used for calculation',borderwidth="0", width=7, background="white",foreground="#00254a",
+    Label2 = Label(Canvas4,text='Used for calculation (example:taxes,discounts)',borderwidth="0", width=7, background="white",foreground="#00254a",
         font="-family {Segoe UI} -size 8 ")
-    Label2.place(relx=0.02, rely=0.520, relheight=0.05, relwidth=0.200)
+    Label2.place(relx=0.02, rely=0.520, relheight=0.05, relwidth=0.300)
     options_list = ["Yes", "No"]
     cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
     cmb.place(relx=0.4, rely=0.520, relheight=0.05, relwidth=0.300)
 
-    Label1 = Label(Canvas4,text='Method to allocate',borderwidth="0", width=7, background="white",foreground="#00254a",
+    Label1 = Label(Canvas4,text='Method to allocate when used in purchase invoice',borderwidth="0", width=7, background="white",foreground="#00254a",
         font="-family {Segoe UI} -size 8")
-    Label1.place(relx=0.02, rely=0.580, relheight=0.05, relwidth=0.200)
+    Label1.place(relx=0.02, rely=0.580, relheight=0.05, relwidth=0.300)
     options_list = ["Not Applicable", "Appropriate by Qty","Appropriate by Value"]
     cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
     cmb.place(relx=0.4, rely=0.580, relheight=0.05, relwidth=0.300)
@@ -336,12 +503,81 @@ def create_group():
     sbmibtn=Button(Canvas4,text='Save',borderwidth="0",background="#023047",
                                      foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ").place(relx=0.6, rely=0.680)
     sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
-                                     foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ",command=Group_Analysis).place(relx=0.8, rely=0.680)
+                                     foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ",command=list_group).place(relx=0.8, rely=0.680)
 
 
     global Canvas3
     Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
-    Canvas3.place(relx=0.850, rely=0.100, relheight=0.8, relwidth=0.150)
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.850, relwidth=0.150)
+
+def bank_occ():
+    global Canvas1
+    Canvas1 = tk.Canvas( background="#B0B0B0", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas1.place(relx=0, rely=0.070, relheight=0.880, relwidth=.850)
+    Label5 = Label(Canvas1,text='Group alteration',borderwidth="0", width=3, background="#d2e3fa",anchor='w',
+                                     foreground="#00254a",
+                                     font="-family {Segoe UI} -size 10 -weight bold ")
+    Label5.place(relx=0, rely=0, relheight=0.03, relwidth=0.999)
+   
+
+    global Canvas4
+    Canvas4 = tk.Canvas(Canvas1, background="#ffffff", insertbackground="white", relief="ridge",selectbackground="white", selectforeground="white")
+    Canvas4.place(relx=0.01, rely=0.040, relheight=0.760, relwidth=0.800)
+    Label6 = Label(Canvas4,text='Name',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label6.place(relx=0.00, rely=0.010, relheight=0.05, relwidth=0.200)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3",text='Bank OD A/c',background="white",foreground="#00254a")
+    Entry1.place(relx=0.2, rely=0.010, relheight=0.05, relwidth=0.300)
+    Label7 = Label(Canvas4,text='(alias)',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label7.place(relx=0.00, rely=0.070, relheight=0.05, relwidth=0.200)
+    Entry1 = Entry(Canvas4,width=28,borderwidth="3",text='Bank OCC A/c',background="white",foreground="#00254a")
+    Entry1.place(relx=0.2, rely=0.070, relheight=0.05, relwidth=0.300)
+    Label1 = Label(Canvas4,text='Under   :',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label1.place(relx=0.0, rely=0.250, relheight=0.05, relwidth=0.200)
+    options_list = ["Loans(liability"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.4, rely=0.250, relheight=0.05, relwidth=0.300)
+
+    
+    Label8 = Label(Canvas4,text='Group Behaves like a sub-ledger',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label8.place(relx=0.0, rely=0.400, relheight=0.05, relwidth=0.300)
+    options_list = ["Yes", "No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.4, rely=0.400, relheight=0.05, relwidth=0.300)
+
+    Label3 = Label(Canvas4,text='Nett debit\credit balances for reporting',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label3.place(relx=0.0, rely=0.460, relheight=0.05, relwidth=0.300)
+    options_list = ["Yes", "No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.4, rely=0.460, relheight=0.05, relwidth=0.300)
+
+    Label2 = Label(Canvas4,text='Used for calculation (example:taxes,discounts)',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8 ")
+    Label2.place(relx=0.02, rely=0.520, relheight=0.05, relwidth=0.300)
+    options_list = ["Yes", "No"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.4, rely=0.520, relheight=0.05, relwidth=0.300)
+
+    Label1 = Label(Canvas4,text='Method to allocate when used in purchase invoice',borderwidth="0", width=7, background="white",foreground="#00254a",
+        font="-family {Segoe UI} -size 8")
+    Label1.place(relx=0.02, rely=0.580, relheight=0.05, relwidth=0.300)
+    options_list = ["Not Applicable", "Appropriate by Qty","Appropriate by Value"]
+    cmb=ttk.Combobox(Canvas4,values=options_list,font=("times new roman",10))
+    cmb.place(relx=0.4, rely=0.580, relheight=0.05, relwidth=0.300)
+
+    sbmibtn=Button(Canvas4,text='Save',borderwidth="0",background="#023047",
+                                     foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ").place(relx=0.6, rely=0.680)
+    sbmibtn=Button(Canvas4,text='Exit',borderwidth="0",background="#023047",
+                                     foreground="white",width=10,font="-family {Segoe UI} -size 12 -weight bold ",command=list_group).place(relx=0.8, rely=0.680)
+
+
+    global Canvas3
+    Canvas3 = tk.Canvas(background="#e6ffff", insertbackground="black", relief="ridge",selectbackground="blue", selectforeground="white")
+    Canvas3.place(relx=0.850, rely=0.100, relheight=0.850, relwidth=0.150)
 
 def selected_groups():
         global selected_groups_frame
